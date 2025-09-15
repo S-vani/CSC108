@@ -45,4 +45,6 @@ def convert_temp(temp: int, celsius: bool) -> float:
 
 print(convert_temp(80, True))
 
+print("test")
+
 
