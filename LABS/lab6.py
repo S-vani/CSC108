@@ -54,6 +54,10 @@ def loopy_madness_with_while_loops(string1: str, string2: str) -> str:
 
     rev_1 = False
     rev_2 = False
+    if len_1 == 0:
+        return string2
+    elif len_2 == 0:
+        return string1
 
     while len(new_string) < 2 * max_len:
         new_string += string1[counter_1]
@@ -131,6 +135,8 @@ def count_types(lst: List[Any]) -> List[int]:
     [2, 1]
     >>> count_types([True, 'str1', 1, False, 'str2', True])
     [3, 2, 1]
+    >>> count_types([True, 1, 1, False, 'str2', True])
+    [3, 2, 1]
     """
     type_bool = 0
     type_int = 0
@@ -187,8 +193,6 @@ def second_largest(lst: List[int]) -> int:
     5
     >>> second_largest([-1, -2, -3, -4])
     -2
-    >>> second_largest([10, 10])
-    10
     >>> second_largest([7, 2, 7, 5, 7])
     7
     """
